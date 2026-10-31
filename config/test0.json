@@ -1,0 +1,8 @@
+{
+	"title": {
+		"2": "Single Box Test"
+	},
+	"testIn": "#####\n#@$.#\n#####",
+	"isTest": "true",
+	"isValidator": "true"
+}

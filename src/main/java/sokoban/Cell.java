@@ -74,8 +74,10 @@ public class Cell {
 
     public char getMapChar() {
         if (isWall()) return '#';
-        if (isDropzone()) return '*';
-        return '.';
+        if (isDropzone() && hasBox()) return '*'; // Box on a target
+        if (isDropzone()) return '.';             // Empty target
+        if (hasBox()) return '$';                 // Box on a regular floor
+        return ' ';                               // Regular empty floor space
     }
 
     public String getInput() {
