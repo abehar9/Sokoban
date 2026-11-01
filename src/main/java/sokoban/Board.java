@@ -52,7 +52,7 @@ public class Board {
         }
         pusher.getCell().visit();
 
-        //BufferedGroup bufferedGroup = graphics.createBufferedGroup().setZIndex(-1);
+
         Group bufferedGroup = graphics.createGroup().setZIndex(-1);
         group.add(bufferedGroup);
         int xMin = 0, yMin = 0, xMax = width, yMax = height;
