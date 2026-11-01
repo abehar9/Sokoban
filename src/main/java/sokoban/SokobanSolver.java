@@ -21,7 +21,7 @@ public class SokobanSolver {
             if (plan != null && !plan.isEmpty()) {
                 StringBuilder solutionString = new StringBuilder();
                 
-                // Use plan.actions() to get the list of actions
+                
                 List<Action> actions = plan.actions();
                 for (Action action : actions) {
                     if (action != null) {
