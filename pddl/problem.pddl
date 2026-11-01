@@ -26,7 +26,7 @@
     (right p2 p3)
     (right p3 p4)
 
-    ;; Reverse directions
+  
     (left p1 p0)
     (left p2 p1)
     (left p3 p2)
