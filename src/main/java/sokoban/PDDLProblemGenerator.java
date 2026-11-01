@@ -108,7 +108,7 @@ public class PDDLProblemGenerator {
         out.append("(define (problem sokoban-level)\n");
         out.append("  (:domain Sokoban)\n"); // Matches new domain name
 
-        // 1. Define Objects
+        
         out.append("  (:objects\n    ");
         out.append(String.join(" ", positions.values()));
         out.append(" - position\n    ");
@@ -119,7 +119,7 @@ public class PDDLProblemGenerator {
         }
         out.append(String.join(" ", boxNames)).append(" - box\n  )\n");
 
-        // 2. Initial State Definitions
+     
         out.append("  (:init\n");
         out.append("    (player-at ").append(position(playerX, playerY)).append(")\n");
 
@@ -128,7 +128,7 @@ public class PDDLProblemGenerator {
             out.append("    (box-at b").append(i).append(" ").append(position(b[0], b[1])).append(")\n");
         }
 
-        // Free tiles
+   
         for (String k : sortedPositionKeys) {
             String[] xy = k.split(",");
             int x = Integer.parseInt(xy[0]);
@@ -147,7 +147,7 @@ public class PDDLProblemGenerator {
             }
         }
 
-        // Directional Adjacency Connections
+   
         for (String k : sortedPositionKeys) {
             String[] xy = k.split(",");
             int x = Integer.parseInt(xy[0]);
@@ -169,7 +169,7 @@ public class PDDLProblemGenerator {
 
         out.append("  )\n");
 
-        // 3. Goal Definition
+
         out.append("  (:goal (and\n");
         int limit = Math.min(boxes.size(), goals.size());
         for (int i = 0; i < limit; i++) {
