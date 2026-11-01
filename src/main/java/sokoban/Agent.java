@@ -25,11 +25,10 @@ public class Agent {
         try {
             String line;
 
-            // Keep running and handle every turn.
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.trim().split("\\s+");
 
-                // Turn 1: Initial full board setup (width, height, boxCount)
+              
                 if (parts.length == 3 && !initialized) {
                     int width = Integer.parseInt(parts[0]);
                     int height = Integer.parseInt(parts[1]);
@@ -50,7 +49,7 @@ public class Agent {
                         boxes.add(readPosition(reader));
                     }
 
-                    // Generate problem and solve ONCE on turn 1
+                 
                     Path problemPath = Paths.get(PROBLEM_FILE);
                     Files.createDirectories(problemPath.getParent());
 
@@ -72,10 +71,8 @@ public class Agent {
                     initialized = true;
 
                 } 
-                // Turn 2+: Game updates positions each tick (width, height sent, or box updates)
+       
                 else if (initialized) {
-                    // Depending on codinGame format, consume the incoming frame coordinates 
-                    // so the reader stays synchronized without resetting the solution.
                     if (parts.length == 2) {
                         // Consumes player or layout positions if sent as 2 parts, 
                         // or if box positions follow, loop through boxCount.
@@ -100,7 +97,7 @@ public class Agent {
                     continue;
                 }
 
-                // Output exactly one move per turn from our pre-computed solution
+         
                 if (nextMove < solution.length()) {
                     System.out.println(solution.charAt(nextMove));
                     nextMove++;
@@ -132,7 +129,7 @@ public class Agent {
         String[] parts = line.trim().split("\\s+");
 
         if (parts.length < 2) {
-            return new int[] { 0, 0 }; // Safe fallback if a single coordinate or blank line is read
+            return new int[] { 0, 0 }; 
         }
 
         return new int[] {
