@@ -89,6 +89,7 @@ This project builds upon the original Sokoban implementation by [fiorinoh](https
 
 The original repository provides the game environment and level configurations, which were extended with a PDDL-based representation and automated planning functionality.
 
+## Original README
 Play the game on [CodinGame](https://www.codingame.com/training/hard/sokoban)
 
 Maven is needed.
