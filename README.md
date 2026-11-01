@@ -1,5 +1,8 @@
 # Sokoban – PDDL-Based Solver
 
+## Attention 
+For the first 10 test cases the planner passes for all of them except 1 and 5, we suspect it was an issue with assigning a specific box to a specific location in the problem file yet this was how we were able to keep the branches manageable. 
+
 ## Overview
 
 This project implements an automated solver for the classic **Sokoban puzzle game** using PDDL (Planning Domain Definition Language) and Java.
